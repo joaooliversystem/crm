@@ -49,6 +49,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'Principal';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+
+
+//Area Administrativa
+
+$route['LogoutAdmin'] = 'Admin/logout';
+$route['painel'] = 'Admin/index';
+
+
+
+        //AjaxPages
+
+        $route['AjaxPages/pageAdministrador'] = 'AjaxAdminPages/administrador';
+        $route['AjaxPages/documentoslista'] = 'AjaxAdminPages/documentoslista';
+        $route['AjaxPages/documentos'] = 'AjaxAdminPages/documentos';
+        $route['AjaxPages/cadastros'] = 'AjaxAdminPages/cadastros';
+        $route['AjaxPages/banners'] = 'AjaxAdminPages/banners';
+        $route['AjaxPages/leiloes'] = 'AjaxAdminPages/leiloes';
+        $route['AjaxPages/lotes'] = 'AjaxAdminPages/lotes';
+        $route['AjaxPages/categorias'] = 'AjaxAdminPages/categorias';
+        $route['AjaxPages/comitentes'] = 'AjaxAdminPages/comitentes';
+        $route['AjaxPages/newslatter'] = 'AjaxAdminPages/newslatter';
+        $route['AjaxPages/paginas'] = 'AjaxAdminPages/paginas';
+        $route['AjaxPages/servicos'] = 'AjaxAdminPages/servicos';
+
+
+
+ //SendData AjaxRoute
+
+
+        $route['sendBuildAdmin'] = 'AjaxAdmin/setInTables';
+        $route['deletePostItem'] = 'AjaxAdmin/deleteInTables';
+
+
